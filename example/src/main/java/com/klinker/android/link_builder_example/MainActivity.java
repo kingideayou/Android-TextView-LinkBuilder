@@ -99,11 +99,13 @@ public class MainActivity extends Activity {
         // underlined
         Link yes = new Link("Yes");
         yes.setUnderlined(true);
+        yes.setTextSize(90f);
         yes.setTextColor(Color.parseColor("#FFEB3B"));
 
         // not underlined
         Link no = new Link("No");
         no.setUnderlined(false);
+        no.setTextSize(90f);
         no.setTextColor(Color.parseColor("#FFEB3B"));
 
         // bold

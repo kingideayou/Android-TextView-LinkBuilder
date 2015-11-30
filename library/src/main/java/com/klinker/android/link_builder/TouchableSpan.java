@@ -20,6 +20,7 @@ import android.graphics.Color;
 import android.os.Handler;
 import android.text.TextPaint;
 import android.text.style.ClickableSpan;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.View;
 
@@ -105,6 +106,7 @@ public class TouchableSpan extends TouchableBaseSpan {
         ds.setFakeBoldText(link.isBold());
         ds.setColor(textColor);
         ds.bgColor = touched ? adjustAlpha(textColor, link.getHighlightAlpha()) : Color.TRANSPARENT;
+        ds.setTextSize(link.getTextSize());
         if(link.getTypeface() != null)
             ds.setTypeface(link.getTypeface());
     }

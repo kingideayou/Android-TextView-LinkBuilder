@@ -23,6 +23,7 @@ public class Link {
 
     public static final int DEFAULT_COLOR = Color.parseColor("#33B5E5");
     private static final float DEFAULT_ALPHA = .20f;
+    private static final float DEFAULT_TEXT_SIZE = 70f;
 
     private String text;
     private String prependedText;
@@ -30,6 +31,7 @@ public class Link {
     private Pattern pattern;
     private int textColor = 0;
     private float highlightAlpha = DEFAULT_ALPHA;
+    private float textSize = DEFAULT_TEXT_SIZE;
     private boolean underlined = true;
     private boolean bold = false;
     private Typeface typeface;
@@ -49,6 +51,7 @@ public class Link {
         this.clickListener = link.getClickListener();
         this.longClickListener = link.getLongClickListener();
         this.textColor = link.getTextColor();
+        this.textSize = link.getTextSize();
         this.highlightAlpha = link.getHighlightAlpha();
         this.underlined = link.isUnderlined();
         this.bold = link.isBold();
@@ -177,6 +180,15 @@ public class Link {
 
     public Link setTypeface(Typeface typeface) {
         this.typeface = typeface;
+        return this;
+    }
+
+    public float getTextSize() {
+        return textSize;
+    }
+
+    public Link setTextSize(float textSize) {
+        this.textSize = textSize;
         return this;
     }
 
